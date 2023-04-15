@@ -1,0 +1,18 @@
+ <select class="form-control custom-select-value" name="donorid">
+                                                                                        <option value="" disabled selected>--select name--</option>
+																						<?php
+																							require "config.php"; 
+																							$sql="SELECT * FROM `donor`";
+															
+																							$res=mysqli_query($con,$sql);
+																						
+																							while($row=mysqli_fetch_assoc($res))
+																							{
+																						?>
+																								<option value="<?php echo $row['id'];?>"> <?php echo $row['fullname'];?> </option>
+																						<?php
+																							} 
+																						?>
+																						
+																							
+                                                                                    </select>
